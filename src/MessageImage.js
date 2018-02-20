@@ -33,15 +33,16 @@ const styles = StyleSheet.create({
   container: {
   },
   image: {
-    width: 150,
-    height: 100,
+    width: '100%',
+    height: 200,
     borderRadius: 13,
-    margin: 3,
     resizeMode: 'cover',
   },
   imageActive: {
+    resizeMode: 'cover',
+    borderRadius: 13,
     flex: 1,
-    resizeMode: 'contain',
+    width: null,
   },
 });
 
