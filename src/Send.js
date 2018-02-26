@@ -26,7 +26,7 @@ export default class Send extends React.Component {
         accessibilityTraits="button"
       >
         <View>
-          {this.props.children || <Text style={[styles.text, this.props.textStyle]}>{this.props.label}</Text>}
+          {this.props.children || <Text style={[styles.text, this.props.textStyle, this.props.text.trim().length <= 0 ? styles.disableSendButton : styles.enableSendButton]}>{this.props.label}</Text>}
         </View>
       </TouchableOpacity>
     );
@@ -44,6 +44,13 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     marginLeft: 10,
     marginRight: 10,
+  },
+  enableSendButton: {
+    opacity: 1,
+  },
+
+  disableSendButton: {
+    opacity: 0.5,
   },
 });
 
