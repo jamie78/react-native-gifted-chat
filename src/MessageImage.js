@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
+    minWidth: 200,
     height: 200,
     borderRadius: 13,
     resizeMode: 'cover',
